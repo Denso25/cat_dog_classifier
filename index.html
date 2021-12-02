@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/normalize.css">
-    <title>Cats and Dogs Classifier </title>
+    <meta property="og:image" content="https://i.postimg.cc/TPcF8crh/og-imagen.png">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <title>Cat and Dog Classifier </title>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
 </head>
+
 <body>
+    <div class="preloader_wrapper active">
+        <div class="preloader"></div>
+        <div class="title_preloader">
+            Loading...
+        </div>
+    </div>
     <div class="content_title">
         <h1>Cats and Dogs Classifier</h1>
     </div>
     <div class="content_main">
-        <video id="video" controls playsinline width="400" height="224">
-            <source src="gato_o_perro.mp4" type="video/mp4">
-        </video>
-        <canvas id="mainCanvas" width="100" height="56"></canvas>
-        <canvas id="smallCanvas" width="100" height="100"></canvas>
-        <button id="btnProof">CLick</button>
-        <div id="prediction"></div>
+        <div class="card_prediction">
+            <div class="content_video">
+                <video id="video">
+                </video>
+            </div>
+            <canvas id="smallCanvas" width="100" height="100"></canvas>
+            <div class="items">
+                <div class="buttons_items">
+                    <button id="btnPredictionControl" class="hover_w"> Stop</button>
+                    <button id="btnSwitchCamera" class="hover_w"><img src="https://icon-library.com/images/switch-camera-icon/switch-camera-icon-18.jpg" width="30" alt="" srcset=""></button>
+                </div>
+                <div class="content_prediction_result">
+                    <span id="txtPredictionResult">Waiting...</span>
+                    <div id="imgPredictionResult"></div>
+                </div>
+                <div class="content_gif">
+                    <img id="imgGif" src="https://i.postimg.cc/ZRg6D5z6/giphy.gif" alt="" srcset="" width="90">
+                </div>
+                <div class="content_social_network">
+                    <a href="https://m.me/olger.cruz.31" target="_blank">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/ym/r/YQbyhl59TWY.ico?_nc_eui2=AeE1_24PfqL4Mec2pdWivixLy1__ocksmdfLX_-hySyZ1-gq1wIVlxMipfeXmcz1VJMY6xgy59aeej73BG-58HO8"
+                            alt="" srcset="" width="30">
+                        <span>Olger</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/preloadImg.js"></script>
 </body>
+
 </html>

@@ -19,12 +19,12 @@
   /**
    * Remove the margin in all browsers.
    */
-  
+
   body {
     margin: 0;
     background-color: black;
     color: white;
-    font-family: sans-serif, Arial, Helvetica;
+    font-family: cursive, sans-serif ;
     box-sizing: border-box;
   }
   
