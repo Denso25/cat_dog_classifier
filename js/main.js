@@ -69,7 +69,7 @@ const init = async () => {
 
 const setupModel = async () => {
     if (window.Worker) {    
-        worker = new Worker('../web-worker/worker.js');
+        worker = new Worker("web-worker/worker.js");
         worker.onmessage = (e) => {
             isWaiting = !isWaiting;
             if (e.data.modelIsReady) {
